@@ -8,16 +8,16 @@ from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferMemory
 from langchain.models import ChatOpenAI
 
-directory_path = "/your/private/doc/path"
+directory_path = "/user/ryan/desktop/ALSFinal2022.pdf"
 
 def create_chatbot():
-    documents = load_documents(directory_path)
+    documents = load_documents(/user/ryan/desktop/ALSFinal2022.pdf)
     split_documents = split_text(documents)
     vectorstore = create_vectorstore(split_documents)
     return create_conversational_chain(vectorstore)
 
-def load_documents(directory_path):
-    document_types = ["**/*.pdf", "**/*.txt"] 
+def load_documents(/user/ryan/desktop/ALSFinal2022.pdf):
+    document_types = [.pdf] 
     loaders = [DirectoryLoader(directory_path, glob=doc_type) for doc_type in document_types]
     documents = [doc for loader in loaders for doc in loader.load()]
     print(f"Total number of documents: {len(documents)}") 
